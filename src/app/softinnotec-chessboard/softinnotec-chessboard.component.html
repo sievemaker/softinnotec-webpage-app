@@ -1,1 +1,7 @@
-<p>softinnotec-chessboard works!</p>
+@for (fileIdx of [].constructor(fileLength()); track fileIdx) {
+  <div class="file">
+    @for (rankIdx of [].constructor(rankLength()); track rankIdx) {
+      <app-softinnotec-square [x]="rankIdx" [y]="fileIdx" />
+    }
+  </div>
+}
