@@ -31,7 +31,7 @@ export class SoftinnotecChessboardComponent implements AfterViewInit, OnInit {
   async startGame() {
     while (!this.knightTourService.isGameFinished()) {
       await this.makeNextMove();
-      await this.delay(500);
+      await this.delay(1000);
     }
   }
 
