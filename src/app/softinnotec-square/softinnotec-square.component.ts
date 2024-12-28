@@ -1,4 +1,4 @@
-import {Component, input} from '@angular/core';
+import {Component, input, model, OnInit, signal} from '@angular/core';
 import {CommonModule} from "@angular/common";
 
 @Component({
@@ -8,7 +8,14 @@ import {CommonModule} from "@angular/common";
   templateUrl: './softinnotec-square.component.html',
   styleUrl: './softinnotec-square.component.sass'
 })
-export class SoftinnotecSquareComponent {
+export class SoftinnotecSquareComponent implements OnInit {
+
   x = input();
   y = input();
+  squareClass = model('empty');
+
+  ngOnInit(): void {
+      console.log(this.y())
+  }
+
 }

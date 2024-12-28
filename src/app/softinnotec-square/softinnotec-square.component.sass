@@ -8,11 +8,63 @@
   background-color: black
 
 .square.empty
-    background-color: black
+  background-color: black
+
+.square.notempty
+  background-color: black
+  color: #009193
+  border-radius: 50%
+  // Makes it a circle
+  position: relative
+
+  // Add a "fuzzy" glow using filter and box-shadow
+  filter: blur(8px)
+  box-shadow: (0 0 20px 10px rgba(0, 139, 139, 0.7), 0 0 40px 20px rgba(0, 139, 139, 0.4), 0 0 60px 30px rgba(0, 139, 139, 0.2))
+
+  // Pseudo-elements for noise/glitch effect
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: inherit
+    border-radius: 50%
+    opacity: 0.5
+    filter: blur(10px)
+    animation: noise 0.3s infinite alternate
+
+  &::before
+    transform: translate(5px, 3px)
+
+  &::after
+    transform: translate(-5px, -3px)
+
+// Keyframes for glitch effect
+@keyframes glitch
+  0%
+    transform: translate(0, 0)
+  25%
+    transform: translate(2px, -2px)
+  50%
+    transform: translate(-2px, 2px)
+  75%
+    transform: translate(3px, 0)
+  100%
+    transform: translate(0, -3px)
+
+@keyframes noise
+  0%
+    transform: translate(2px, 1px)
+  100%
+    transform: translate(-2px, -1px)
 
 .square.marked
     background-color: #009193
 
 .square.proposed
-    background-color: darkred
+  background-color: #009193
+  // Optional Animation
+  animation: glitch 1.5s infinite linear alternate
 

@@ -1,7 +1,7 @@
-@for (fileIdx of [].constructor(fileLength()); track fileIdx) {
+@for (idx of [].constructor(fileLength()); track idx; let fileIndex = $index) {
   <div class="file">
-    @for (rankIdx of [].constructor(rankLength()); track rankIdx) {
-      <app-softinnotec-square [x]="rankIdx" [y]="fileIdx" />
+    @for (idx of [].constructor(rankLength()); track idx; let rankIndex = $index) {
+      <app-softinnotec-square [x]="rankIndex + 1" [y]="fileIndex + 1" />
     }
   </div>
 }
