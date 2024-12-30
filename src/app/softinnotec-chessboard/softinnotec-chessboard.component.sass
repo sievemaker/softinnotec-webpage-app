@@ -3,20 +3,17 @@
   display: grid                         // Use CSS Grid to arrange the chessboard
   grid-template-columns: repeat(8, 1fr)  // 8 equal columns
   grid-template-rows: repeat(8, 1fr)     // 8 equal rows
-  gap: 0                                  // No gap between squares
-  width: 100%                             // Full width of the parent container
-  height: 100%                            // Full height of the parent container
-  aspect-ratio: 1                         // Keep aspect ratio 1:1 (square)
+  gap: 0                                  // No gaps between squares
+  width: 70%                             // Full width of the parent container
+  aspect-ratio: 1                         // Maintain a square shape
   margin: 0 auto                          // Center the chessboard horizontally
-  position: relative                      // Optional, for better control of inner elements
+  position: relative
 
 // Styling for the file (each column of squares)
 .file
-  display: flex                            // Use flexbox to stack squares vertically within the file
-  flex-direction: column                   // Stack squares in a column within each file
-  height: 100%                             // Ensure file takes full height of the chessboard
-  margin: 0                                // Remove any margin between files
-  padding: 0                                 // Fill the entire height of the chessboard cell
+  display: contents                       // Flatten `.file` so it doesn’t interfere with grid layout
+  padding: 0                              // Remove any padding
+  margin: 0
 
 // Optional: Media query to adjust the chessboard on smaller screens
 @media (max-width: 768px)
