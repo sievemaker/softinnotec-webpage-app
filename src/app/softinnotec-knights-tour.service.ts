@@ -37,6 +37,6 @@ export class SoftinnotecKnightsTourService {
   }
 
   isGameFinished(): boolean {
-    return false;
+    return true;
   }
 }

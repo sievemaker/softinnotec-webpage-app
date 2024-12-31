@@ -1,0 +1,20 @@
+// Parent container
+.softinnotec-card-grid
+  display: flex
+  flex-wrap: wrap         // Allow children to wrap onto new rows
+  width: 100%             // Full width of the parent container
+  gap: 10px               // Spacing between child components
+  box-sizing: border-box  // Include padding and borders in size calculations
+
+// App card wrapper
+app-card
+  flex: 1 1 calc(50% - 10px) // Take 50% of parent width, minus gap adjustment
+  box-sizing: border-box     // Include padding/borders in dimensions
+  padding: 10px              // Optional inner padding
+  display: flex              // Allow flexible layout inside the card
+  flex-direction: column     // Stack content vertically (if needed)
+
+// Responsive layout for smaller screens
+@media (max-width: 600px)
+  app-card
+    flex: 1 1 100%           // Stack cards vertically, full-width

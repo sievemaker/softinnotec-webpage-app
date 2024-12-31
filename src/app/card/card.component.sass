@@ -1,0 +1,20 @@
+.softinnotec-card
+  background-color: white
+  font-family: 'Roboto', sans-serif
+  font-size: 18px
+  line-height: 1.6
+  font-weight: 400
+  text-indent: 30px // Adds indentation to the first line of each paragraph
+  text-align: justify
+  text-align-last: left  // Aligns the last line to the left instead of justified
+  box-sizing: border-box
+  padding: 10px  // Optional spacing between cards
+
+.softinnotec-card-header
+  text-align: center
+
+// Media query for smaller screens
+@media (max-width: 600px)
+  .softinnotec-card
+    flex: 1 1 100%  // Make cards stack vertically
+    font-size: 16px // Adjust font size for smaller screens
