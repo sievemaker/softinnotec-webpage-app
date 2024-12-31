@@ -1,0 +1,15 @@
+<div class="avatar-container">
+  <img
+    [alt]="altText()"
+    [src]="imagePath"
+    [ngStyle]="{'width.px': size(), 'height.px': size()}"
+    class="avatar-image"
+  />
+</div>
+<div class="avatar-name">
+  {{name()}}
+</div>
+<div class="avatar-position">
+  {{position()}}
+</div>
+
