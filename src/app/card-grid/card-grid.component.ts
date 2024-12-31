@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {CardComponent} from "../card/card.component";
 import {AboutCardComponent} from "../about-card/about-card.component";
+import {ContactCardComponent} from "../contact-card/contact-card.component";
 
 @Component({
   selector: 'app-card-grid',
-  imports: [CardComponent, AboutCardComponent],
+  imports: [AboutCardComponent, ContactCardComponent],
   standalone: true,
   templateUrl: './card-grid.component.html',
   styleUrl: './card-grid.component.sass'
