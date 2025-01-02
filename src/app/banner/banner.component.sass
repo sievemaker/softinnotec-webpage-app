@@ -3,22 +3,27 @@
   margin-right: 10px
 
 .app-name
-  font-size: 12px
+  font-size: 16px // Increase font size for better visibility
+  color: white // Ensure text color contrasts with black background
+  white-space: normal // Allow text to wrap
+  word-wrap: break-word // Break long words if necessary
 
 .top-menu
   background-color: black
   font-family: monospace
-
-.top-menu
-  white-space: normal   // Allow text to wrap
-  word-wrap: break-word // Break long words
+  display: flex // Align logo and app-name horizontally
+  align-items: center // Vertically center the items
   padding: 10px
+  color: white // Ensure text is visible on black background
+  justify-content: start // Space out the logo and app-name
 
+  // Responsiveness: Adjust styling on small screens
   @media (max-width: 600px)
-    font-size: 14px  // Adjust font size on smaller screens
+    font-size: 14px
     line-height: 1.4
-    padding: 15px  // Adjust padding if needed
-    min-height: 70px // Ensure a larger minimum height for small screens
-
-
-
+    padding: 15px
+    min-height: 70px // Larger height on small screens
+    .app-name
+      font-size: 14px // Reduce font size for smaller screens
+      white-space: normal // Allow text to wrap on smaller screens
+      word-wrap: break-word // Ensure long words break and wrap properly
