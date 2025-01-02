@@ -4,6 +4,7 @@ import {VatIDFormatterPipe} from "../vat-idformatter.pipe";
 import {PhoneFormatterPipe} from "../phone-formatter.pipe";
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {ButtonComponent, ButtonType} from "../button/button.component";
 
 @Component({
   selector: 'app-contact-card',
@@ -11,8 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
     CardComponent,
     VatIDFormatterPipe,
     PhoneFormatterPipe,
-    MatButtonModule,
-    MatIconModule,
+    ButtonComponent,
   ],
   standalone: true,
   templateUrl: './contact-card.component.html',
@@ -20,4 +20,5 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ContactCardComponent {
 
+  protected readonly ButtonType = ButtonType;
 }

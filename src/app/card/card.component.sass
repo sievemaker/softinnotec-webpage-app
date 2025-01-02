@@ -8,27 +8,32 @@
   text-align: justify
   text-align-last: left  // Aligns the last line to the left instead of justified
   box-sizing: border-box
-  padding: 10px  // Optional spacing between cards
+  padding: 15px  // Slightly larger padding for more space
   color: #777777  // Dark gray for softer contrast
+  border-radius: 16px  // Larger rounded corners for a more modern look
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3)  // Stronger shadow for more elevation
+  transition: transform 0.3s ease, box-shadow 0.3s ease  // Smooth transition for hover effect
+
+  // Hover effect to add interaction
+  &:hover
+    transform: translateY(-4px)  // Lifts the card slightly on hover
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4)  // Stronger shadow on hover for more depth
 
   @media (max-width: 600px)
     flex: 1 1 100%  // Make cards stack vertically
     font-size: 16px // Adjust font size for smaller screens
 
 .softinnotec-card-header
-  font-size: 22px
-    font-weight: 500
-    text-align: center
-    margin-bottom: 1rem
-    line-height: 1.4
-    color: #333
-    width: 100%        // Ensures the element takes full width
-    display: flex      // Enables flexbox for centering
-    justify-content: center  // Centers horizontally
-    align-items: center      //
+  font-size: 24px  // Slightly larger header text
+  font-weight: 500
+  text-align: center
+  margin-bottom: 1rem
+  line-height: 1.4
+  color: #333
+  width: 100%        // Ensures the element takes full width
+  display: flex      // Enables flexbox for centering
+  justify-content: center  // Centers horizontally
+  align-items: center      //
 
   @media (max-width: 600px)
-    font-size: 18px
-
-// Media query for smaller screens
-
+    font-size: 20px  // Slightly smaller font size for header on mobile
