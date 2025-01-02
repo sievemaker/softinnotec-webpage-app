@@ -1,7 +1,11 @@
 .right-panel
-  background-color: #f9f9f9 // Light gray background for subtle separation
-  border-radius: 8px // Optional: rounded corners for a smoother look
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) // Optional: adds subtle depth
+  background-color: #f9f9f9
+  border-radius: 8px
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+  padding: 16px 24px // Add horizontal padding for balance
+  max-width: 100% // Prevent horizontal overflow
+  margin: 0 auto
+  box-sizing: border-box // Ensure padding doesn't affect width
 
   .company-name
     font-size: 22px
@@ -14,14 +18,21 @@
   .email
     font-size: 16px
     font-weight: 400
-    line-height: 1.6
-    margin-bottom: 15px
 
   .phone
     font-size: 18px
     font-weight: 500
-    line-height: 1.4
     color: #222
 
   .button-container
-      margin-bottom: 10px
+    margin-bottom: 10px
+
+@media (max-width: 480px)
+  .right-panel
+    padding: 12px 16px // Reduce padding slightly for small screens
+    margin-left: -4px // Add a slight margin to the left if needed
+
+    .company-name,
+    .email,
+    .phone
+      font-size: 16px // Adjust font sizes to prevent overflow
