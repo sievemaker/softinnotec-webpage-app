@@ -3,6 +3,40 @@
 <head>
   <meta charset="utf-8">
   <title>softinnotec</title>
+  <style>
+    /* Full-screen loading page with black background */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #loading-screen {
+      font-family: 'Verdana', sans-serif;
+      font-weight: 300; /* Light weight */
+      font-size: 1rem; /* Adjust to fit your design */
+      color: white; /* Text color */
+      text-align: center; /* Center the text */
+      text-transform: uppercase; /* Optional: for style */
+      letter-spacing: 2px; /* Add spacing for elegance */
+      text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8), /* Subtle inner glow */
+        0 0 15px rgba(255, 255, 255, 0.6), /* Medium outer glow */
+        0 0 30px rgba(255, 255, 255, 0.4); /* Distant glow */
+      margin: 0; /* Reset margins */
+      padding: 20px; /* Add some padding for spacing */
+      background-color: black; /* Optional: for contrast */
+      height: 100vh; /* Ensure full screen on load */
+      display: flex; /* Centering */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+    }
+
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+  </style>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
