@@ -3,12 +3,15 @@
     Loading...
   </div>
 } @else {
-  <app-banner></app-banner>
-  <mat-card class="interactive-app-banner">
-    <mat-card-content><app-softinnotec-chessboard /></mat-card-content>
-  </mat-card>
+  <div class="main-content">
+    <app-banner></app-banner>
+    <mat-card class="interactive-app-banner">
+      <mat-card-content><app-softinnotec-chessboard /></mat-card-content>
+    </mat-card>
+    <app-card-grid></app-card-grid>
+  </div>
 
-  <app-card-grid></app-card-grid>
+  <app-footer></app-footer>
 
   <main class="content">
     <router-outlet></router-outlet>
