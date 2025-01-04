@@ -6,10 +6,11 @@ import { MatCardModule } from '@angular/material/card';
 import {CardComponent} from "./card/card.component";
 import {CardGridComponent} from "./card-grid/card-grid.component";
 import {FooterComponent} from "./footer/footer.component";
+import {InteractiveBannerComponent} from "./interactive-banner/interactive-banner.component";
 
 @Component({
     selector: 'app-root',
-  imports: [SoftinnotecChessboardComponent, BannerComponent, RouterOutlet, MatCardModule, CardGridComponent, FooterComponent],
+  imports: [BannerComponent, RouterOutlet, MatCardModule, CardGridComponent, FooterComponent, InteractiveBannerComponent],
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.sass'

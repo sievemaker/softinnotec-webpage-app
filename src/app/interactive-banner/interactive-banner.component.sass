@@ -1,0 +1,28 @@
+.interactive-app-banner
+  width: 100%
+  height: auto  // Default height
+  border-radius: 0
+  background-color: black
+  display: flex
+  flex-direction: row
+  gap: 0  // Adjust gap as needed
+  justify-content: center  // Center the child elements horizontally
+  align-items: center  // Center the child elements vertically (if needed)
+  padding-bottom: 20px
+
+  > *
+    flex-shrink: 0  // Prevent elements from shrinking
+    flex-grow: 0  // Prevent elements from stretching
+    flex-basis: 25%  // Set the initial size as a percentage of the container width
+    box-sizing: border-box
+    min-width: 150px  // Ensure elements don't become too small
+    width: auto  // Allow automatic resizing within the flex container
+
+// Media query for smaller screens
+@media (max-width: 768px)
+  .interactive-app-banner
+    height: 200px  // Increase height for smaller screens
+
+  .interactive-app-banner > *
+    flex-basis: 50%  // Allow the elements to take up more space when stacked
+    width: 100%  // Ensure elements take the full width when stacked
