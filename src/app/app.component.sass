@@ -4,3 +4,20 @@
 
 .main-content
   padding-bottom: 80px
+
+.content
+  width: 100%  // Take full width of the parent
+  max-width: 960px  // Restrict content width for larger screens
+  margin: 0 auto  // Center the content horizontally
+  padding: 20px  // Optional: Add padding for spacing
+  background-color: white  // Optional: Add background color for visibility
+  border-radius: 8px  // Optional: Add rounded corners for styling
+  box-sizing: border-box
+
+  // Ensure grid layouts or similar child components adjust properly
+  app-card-grid
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    gap: 10px  // Adjust spacing between child elements
+
