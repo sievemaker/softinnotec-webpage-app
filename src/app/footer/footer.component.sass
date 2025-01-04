@@ -9,6 +9,7 @@
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1)
   padding: 10px 0
   height: 60px // Define height for consistency
+  z-index: 10 // Lower z-index for stacking order
 
   .menu-item
     display: flex
@@ -18,7 +19,15 @@
     color: #00796b // Customize color
     font-family: Arial, sans-serif
     font-size: 14px
+    padding: 5px 10px // Add padding for spacing around the content
+    transition: background-color 0.3s ease, padding 0.3s ease // Smooth transition for background and padding
 
     mat-icon
       font-size: 24px
       margin-bottom: 5px
+
+    &:hover
+      color: #004d40 // Darken the text color on hover
+      background-color: rgba(0, 121, 107, 0.08) // Slightly brighter background
+      padding: 6px 12px // Slightly increase padding on hover for subtle highlight effect
+      border-radius: 5px // Optional: Add border radius for a rounded effect
