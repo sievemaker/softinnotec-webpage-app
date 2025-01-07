@@ -1,23 +1,38 @@
+// Main content container
+.main-content
+  padding-bottom: 80px   // Adjust padding for footer space
+  min-height: 100vh      // Ensure it takes at least the full height of the viewport
+  display: flex          // Enable flexbox layout to handle child elements properly
+  flex-direction: column // Arrange content vertically
+  box-sizing: border-box // Include padding and border in size calculations
+
+// Content container that holds the cards
+.content
+  width: 100%            // Full width of the parent
+  max-width: 1100px      // Restrict content width for larger screens
+  margin: 0 auto         // Center the content horizontally
+  padding: 20px          // Add padding for spacing
+  background-color: white  // Optional: Add background color for visibility
+  border-radius: 8px     // Rounded corners for styling
+  box-sizing: border-box
+
+  // Ensure proper handling of child components (cards)
+  app-card-grid
+    width: 100%            // Ensure grid fills the available width
+    display: flex          // Flexbox for cards
+    flex-wrap: wrap        // Allow items to wrap onto new lines
+    gap: 10px              // Adjust spacing between child elements
+
+// Banner and interactive banner styling
 .interactive-app-banner
   border-radius: 0
   background-color: black
 
-.main-content
-  padding-bottom: 80px
+// Responsive layout for smaller screens (mobile)
+@media (max-width: 600px)
+  .main-content
+    padding-bottom: 60px // Adjust padding for smaller screens
+    min-height: auto     // Remove full height requirement on mobile
 
-.content
-  width: 100%  // Take full width of the parent
-  max-width: 1100px  // Restrict content width for larger screens
-  margin: 0 auto  // Center the content horizontally
-  padding: 20px  // Optional: Add padding for spacing
-  background-color: white  // Optional: Add background color for visibility
-  border-radius: 8px  // Optional: Add rounded corners for styling
-  box-sizing: border-box
-
-  // Ensure grid layouts or similar child components adjust properly
-  app-card-grid
-    width: 100%
-    display: flex
-    flex-wrap: wrap
-    gap: 10px  // Adjust spacing between child elements
-
+  .content
+    padding: 10px        // Adjust padding for mobile view
