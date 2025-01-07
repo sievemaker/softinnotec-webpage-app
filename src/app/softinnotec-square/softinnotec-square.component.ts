@@ -10,12 +10,12 @@ import {CommonModule} from "@angular/common";
 })
 export class SoftinnotecSquareComponent implements OnInit {
 
-  x = input();
-  y = input();
+  x = input<number>(0);
+  y = input<number>(0);
   squareClass = model('empty');
+  squareLabel?: number;
 
   ngOnInit(): void {
-      console.log(this.y())
+    this.squareLabel = (this.y() - 1) * 8 + this.x();
   }
-
 }

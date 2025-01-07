@@ -13,7 +13,35 @@
   > *
     flex-shrink: 0  // Prevent elements from shrinking
     flex-grow: 0  // Prevent elements from stretching
-    flex-basis: 25%  // Set the initial size as a percentage of the container width
+    flex-basis: 80%  // Set the initial size as a percentage of the container width
+    box-sizing: border-box
+    min-width: 150px  // Ensure elements don't become too small
+    width: auto  // Allow automatic resizing within the flex container
+
+.interactive-app-banner-sub
+  width: 100%
+  color: #00FFE0FF
+  font-family: monospace
+  text-shadow: 0 0 5px #009193, 0 0 10px #009193, 0 0 20px #009193, 0 0 40px #00ffe0, 0 0 80px #00ffe0
+  height: auto
+  border-radius: 0
+  background-color: transparent
+  display: flex
+  flex-direction: row
+  gap: 0  // Adjust gap as needed
+  justify-content: center  // Center the child elements horizontally
+  align-items: center  // Center the child elements vertically (if needed)
+  padding-bottom: 20px
+  @media (max-width: 768px) // Adjust font size for tablets and smaller screens
+    font-size: 12px
+
+  @media (max-width: 480px) // Further adjust font size for mobile phones
+    font-size: 8px
+
+  > *
+    flex-shrink: 0  // Prevent elements from shrinking
+    flex-grow: 0  // Prevent elements from stretching
+    flex-basis: 80%  // Set the initial size as a percentage of the container width
     box-sizing: border-box
     min-width: 150px  // Ensure elements don't become too small
     width: auto  // Allow automatic resizing within the flex container
