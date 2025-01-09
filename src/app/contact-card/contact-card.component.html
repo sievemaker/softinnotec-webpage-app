@@ -2,14 +2,6 @@
   <div class="company-name">
     softinnotec Łukasz Rzeszotarski
   </div>
-  <div class="vat-id">
-    <p>{{ '9562082060' | vatIDFormatter:'PL' }}</p>
-    <div class="button-container">
-      <a href="https://aplikacja.ceidg.gov.pl/CEIDG/CEIDG.Public.UI/SearchDetails.aspx?Id=04dc73f8-13c9-45fb-8656-ed4690054b8b" target="_blank" rel="noopener noreferrer">
-        <app-button label="Impressum" icon="book" [type]=ButtonType.External></app-button>
-      </a>
-    </div>
-  </div>
   <div class="email">
     <p>softinnotec&#64;outlook.com</p>
   </div>
@@ -24,4 +16,13 @@
       <app-button label="E-Mail senden" icon="send" [type]=ButtonType.Internal></app-button>
     </a>
   </div>
+  <div class="vat-id">
+    <p>{{ '9562082060' | vatIDFormatter:'PL' }}</p>
+    <div class="button-container">
+      <a href="https://aplikacja.ceidg.gov.pl/CEIDG/CEIDG.Public.UI/SearchDetails.aspx?Id=04dc73f8-13c9-45fb-8656-ed4690054b8b" target="_blank" rel="noopener noreferrer">
+        <app-button label="Impressum" icon="book" [type]=ButtonType.External></app-button>
+      </a>
+    </div>
+  </div>
+
 </app-card>
