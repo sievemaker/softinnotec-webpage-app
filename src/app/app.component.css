@@ -32,20 +32,9 @@ app-footer {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  background-color: #333;
   text-align: center;
   margin-top: auto;
-}
-
-@media (max-width: 812px) {
-  .main-content {
-    padding-bottom: 150px;
-  }
-}
-@media (max-width: 375px) {
-  .main-content {
-    padding-bottom: 150px;
-  }
+  padding-top: 50px;
 }
 
 /*# sourceMappingURL=app.component.css.map */
