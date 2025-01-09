@@ -39,12 +39,12 @@ app-footer {
 
 @media (max-width: 812px) {
   .main-content {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
   }
 }
 @media (max-width: 375px) {
   .main-content {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
   }
 }
 

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     setTimeout(() => {
       // Simulate loading completion, can be replaced with actual logic
       this.loading = false;
-    }, 50); // Adjust the time to match your app's load time  }
+    }, 100); // Adjust the time to match your app's load time  }
   }
 
 }
