@@ -19,8 +19,8 @@ import {SoftinnotecSquareComponent} from "../softinnotec-square/softinnotec-squa
 })
 export class SoftinnotecChessboardComponent implements AfterViewInit, OnInit, OnDestroy {
 
-  fileLength = input(8);
-  rankLength = input(8);
+  fileLength = input(5);
+  rankLength = input(5);
   value = input<number>(1);
   squares = viewChildren(SoftinnotecSquareComponent);
   private squaresArray: SoftinnotecSquareComponent[] = [];
@@ -52,7 +52,7 @@ export class SoftinnotecChessboardComponent implements AfterViewInit, OnInit, On
   }
 
   private async makeNextMove() {
-    const randomNumber = Math.floor(Math.random() * 64) + 1;
+    const randomNumber = Math.floor(Math.random() * 25) + 1;
     const square = this.squaresArray.find(s => s.squareLabel === randomNumber);
     const forward: boolean = this.visitedSquares.length <= 5;
 
