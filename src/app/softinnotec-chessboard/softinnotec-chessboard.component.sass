@@ -4,10 +4,20 @@
   grid-template-columns: repeat(5, 1fr)  // 8 equal columns
   grid-template-rows: repeat(5, 1fr)     // 8 equal rows
   gap: 0                                  // No gaps between squares
-  width: 40%                             // Full width of the parent container
+  width: 20%                             // Full width of the parent container
   aspect-ratio: 1                         // Maintain a square shape
   margin: 0 auto                          // Center the chessboard horizontally
   position: relative
+
+
+// Increase width for smaller screens (mobile devices)
+@media (max-width: 768px)
+  .softinnotec-chessboard
+    width: 30%  // Larger width for tablets and mobile screens
+
+@media (max-width: 480px)
+  .softinnotec-chessboard
+    width: 30%  // Further increase for smaller screens
 
 // Styling for the file (each column of squares)
 .file
