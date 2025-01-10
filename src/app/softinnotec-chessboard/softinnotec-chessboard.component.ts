@@ -70,7 +70,7 @@ export class SoftinnotecChessboardComponent implements AfterViewInit, OnInit, On
           break;
       }
     } else {
-      console.error('Square not found');
+      console.error('Square not found ' + randomNumber);
     }
   }
 

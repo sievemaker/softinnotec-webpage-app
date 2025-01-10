@@ -16,6 +16,6 @@ export class SoftinnotecSquareComponent implements OnInit {
   squareLabel?: number;
 
   ngOnInit(): void {
-    this.squareLabel = (this.y() - 1) * 8 + this.x();
+    this.squareLabel = (this.y() - 1) * 5 + this.x();
   }
 }
