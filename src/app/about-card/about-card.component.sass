@@ -1,31 +1,28 @@
-.about-description p
-  margin: 5px 0  // Reduced margin between paragraphs
-  font-size: 1.1em
+.about-description
+  p
+    margin: 5px 0 // Reduced margin between paragraphs
+    font-size: 1.1em
 
-.about-description ul
-  line-height: 1.6
-  color: #333
-  padding: 10px 15px 10px 15px  // Reduced padding for a more compact layout
-  background-color: #f9f9f9
-  border-radius: 8px
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-  margin-bottom: 20px
-  margin: 0
-  list-style-position: inside
-  margin-top: 10px
-  margin-bottom: 20px
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
 
-.about-description li
-  margin: 0
-  list-style-type: disc
-  color: #555
-  text-align: left
-  font-size: 0.9em
+    li
+      background-color: #f9f9f9
+      margin: 10px 0
+      padding: 15px
+      border-radius: 8px
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      color: #333
 
-.about-description strong
-  color: black
+      &:last-child
+        border-bottom: none // Entfernt die Linie beim letzten Element
 
-.about-description ul li:hover
-  color: black  // Kept the hover effect color
-  cursor: pointer
-  transition: color 0.3s ease-in-out
+      &:hover
+        color: black // Kept the hover effect color
+        cursor: pointer
+        transition: color 0.3s ease-in-out
+
+  strong
+    color: black
