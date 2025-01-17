@@ -34,9 +34,12 @@
             ],
             "styles": [
               "src/styles.sass",
-              "src/softinnotec-theme.sass"
+              "src/softinnotec-theme.sass",
+              "node_modules/cookieconsent/build/cookieconsent.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/cookieconsent/build/cookieconsent.min.js"
+            ]
           },
           "configurations": {
             "production": {
