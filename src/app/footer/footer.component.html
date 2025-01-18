@@ -1,4 +1,5 @@
 <div class="bottom-menu">
+  <!-- Uncomment other menu items as needed -->
   <!--
   <a href="#home" class="menu-item">
     <mat-icon>home</mat-icon>
@@ -13,6 +14,21 @@
     <span>Settings</span>
   </a>
   -->
+
+  <div class="legal-info">
+    <button class="menu-item legal-toggle" (click)="toggleModal()">
+      <mat-icon>info</mat-icon>
+      <span>Legal Info</span>
+    </button>
+    <div class="legal-modal" [ngClass]="{'visible': isModalVisible}">
+      <ul>
+        <li><a href="/static-pages/privacy-policy.html" tabindex="0" class="cc-link" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <li><a href="/static-pages/cookie-policy.html" tabindex="1" class="cc-link" target="_blank" rel="noopener">Cookie Policy</a></li>
+        <li><a href="/static-pages/terms-of-service.html" tabindex="2" class="cc-link" target="_blank" rel="noopener">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
   <a href="https://aplikacja.ceidg.gov.pl/CEIDG/CEIDG.Public.UI/SearchDetails.aspx?Id=04dc73f8-13c9-45fb-8656-ed4690054b8b" class="menu-item">
     <mat-icon>book</mat-icon>
     <span>Impressum</span>

@@ -8,8 +8,9 @@
   background: white
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1)
   padding: 10px 0
-  height: 60px  // Define height for consistency
-  z-index: 10  // Lower z-index for stacking order
+  z-index: 10
+  border-top-left-radius: 10px // Rounded corners at the top
+  border-top-right-radius: 10px
 
   .menu-item
     display: flex
@@ -20,7 +21,8 @@
     font-family: Arial, sans-serif
     font-size: 14px
     padding: 5px 10px
-    transition: background-color 0.3s ease, padding 0.3s ease
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease
+    border-radius: 5px // Slight rounded corners for individual items
 
     mat-icon
       font-size: 24px
@@ -29,14 +31,62 @@
     &:hover
       color: #004d40
       background-color: rgba(0, 121, 107, 0.08)
-      padding: 6px 12px
-      border-radius: 5px
+      transform: translateY(-3px) // Slight hover lift effect
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1)
 
-@media (max-width: 600px)  // Adjust for smaller screens like iPhones
-  .bottom-menu
-    height: 50px  // Reduce the height for smaller screens
-    padding: 5px 0  // Adjust padding if needed
+  .legal-info
+    position: relative
 
-  .menu-item
-    font-size: 12px  // Reduce font size on small screens
-    padding: 4px 8px  // Adjust padding for smaller screens
+    .legal-toggle
+      cursor: pointer
+      color: #00796b
+      font-size: 14px
+      background: none
+      border: none
+      padding: 5px
+      font-family: Arial, sans-serif
+      transition: color 0.3s ease, transform 0.3s ease
+
+      &:hover
+        color: #004d40
+        transform: scale(1.05) // Slight grow effect on hover
+
+    .legal-modal
+      position: absolute
+      width: 200px
+      bottom: 50px
+      left: 50%
+      transform: translateX(-50%)
+      background: white
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) // Deeper shadow for more prominence
+      padding: 15px
+      border-radius: 8px
+      visibility: hidden
+      opacity: 0
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease
+      z-index: 100
+      transform: scale(0.9) // Slightly smaller before appearing
+      transition: all 0.3s ease
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+
+        li
+          margin: 10px 0
+
+          a
+            text-decoration: none
+            color: #00796b
+            font-family: Arial, sans-serif
+            font-size: 14px
+            transition: color 0.3s ease
+
+            &:hover
+              color: #004d40
+
+      &.visible
+        visibility: visible
+        opacity: 1
+        transform: scale(1) // Grow the modal to full size when visible
