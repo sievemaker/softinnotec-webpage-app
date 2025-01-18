@@ -27,21 +27,24 @@ const cookieConsentConfig:NgcCookieConsentConfig = {
     messagelink: `
     <span id="cookieconsent:desc" class="cc-message">{{message}}
       <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="{{cookiePolicyHref}}" target="_blank" rel="noopener">{{cookiePolicyLink}}</a>,
-      <a aria-label="learn more about our privacy policy" tabindex="1" class="cc-link" href="{{privacyPolicyHref}}" target="_blank" rel="noopener">{{privacyPolicyLink}}</a> and our
-      <a aria-label="learn more about our terms of service" tabindex="2" class="cc-link" href="{{tosHref}}" target="_blank" rel="noopener">{{tosLink}}</a>
+      <a aria-label="learn more about our privacy policy" tabindex="1" class="cc-link" href="{{privacyPolicyHref}}" target="_blank" rel="noopener">{{privacyPolicyLink}}</a> und unsere
+      <a aria-label="learn more about our terms of service" tabindex="2" class="cc-link" href="{{tosHref}}" target="_blank" rel="noopener">{{tosLink}}</a> gelesen und verstanden haben.
     </span>
     `,
   },
   content:{
-    message: 'By using our site, you acknowledge that you have read and understand our ',
+    message: 'Durch die Nutzung unserer Website bestätigen Sie, dass Sie unsere ',
+    allow: 'Cookies erlauben',
+    deny: 'Cookies ablehnen',
+    link: 'Mehr erfahren',
 
-    cookiePolicyLink: 'Cookie Policy',
+    cookiePolicyLink: 'Cookie-Richtlinie',
     cookiePolicyHref: '/static-pages/cookie-policy.html',
 
-    privacyPolicyLink: 'Privacy Policy',
+    privacyPolicyLink: 'Datenschutzrichtlinie',
     privacyPolicyHref: '/static-pages/privacy-policy.html',
 
-    tosLink: 'Terms of Service',
+    tosLink: 'Nutzungsbedingungen',
     tosHref: '/static-pages/terms-of-service.html',
   }
 };

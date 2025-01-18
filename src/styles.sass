@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
 html, body, app-root
   margin: 0
   padding: 0
@@ -6,8 +6,9 @@ html, body, app-root
   height: 100%
   box-sizing: border-box
   overflow-x: hidden
-  overflow: hidden
+  overflow-y: hidden
 
+/* Cookie Consent Styles */
 .cc-animate.cc-revoke.cc-bottom
   transform: none !important
   animation: none !important
@@ -16,3 +17,86 @@ html, body, app-root
 .cc-revoke
   display: none !important
 
+/* Banner Styling */
+.cc-banner
+  background-color: #333333 !important
+  width: 100%  // Take full width of the screen
+  position: fixed
+  bottom: 0
+  left: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 10px 0 20px 0  // Add padding for spacing between content and edges
+  z-index: 9999  // Ensure it appears on top of other content
+
+  .cc-message
+    font-size: 16px !important
+    text-align: center !important
+    color: white
+    padding: 10px 20px  // Padding inside the message box
+    margin-bottom: 10px  // Spacing between message and buttons
+    border-radius: 4px
+
+  .cc-banner-buttons
+    display: flex
+    justify-content: center  // Center the buttons
+    width: 100%
+    .cc-btn
+      width: 48%  // Buttons will take equal space
+      padding: 12px
+      border-radius: 4px
+      font-size: 14px
+      cursor: pointer
+      text-align: center
+      margin: 0 5px  // Added a little margin between buttons
+
+      &.accept
+        background-color: #009193
+        color: white
+
+      &.decline
+        background-color: #b4b4b4
+        color: white
+
+/* Mobile Responsiveness */
+@media (max-width: 600px)
+  .cc-banner .cc-message
+    font-size: 14px !important
+    padding: 8px 16px
+    margin-bottom: 5px  // Tighter spacing for mobile view
+
+  .cc-banner-buttons
+    .cc-btn
+      width: 50%  // Make buttons take 50% width each
+      margin: 5px 0  // Optional: Slight margin for better spacing
+
+/* Center the Compliance Section */
+.cc-window.cc-banner
+  display: flex
+  justify-content: center  // Horizontally center content
+  align-items: center      // Vertically center content
+  text-align: center
+
+  .cc-compliance
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%              // Ensure full width
+    text-align: center
+    padding: 10px
+    font-size: 16px
+    color: white
+
+@media (max-width: 600px)
+  .cc-window.cc-banner
+    padding: 10px
+
+  .cc-compliance
+    font-size: 14px
+    padding: 8px
+
+@media (min-width: 600px)
+  .cc-banner
+    padding: 10px 0 20px 0  // Add padding to left and right on larger screens for better spacing
