@@ -1,137 +1,52 @@
-/* Global Styles for Static Pages */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Light background for the page */
-  margin: 0;
-  padding: 0;
-  color: #333; /* Text color */
+/* Typography */
+.banner {
+  width: 100%;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px; /* Space between banner and main content */
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff; /* White background for content area */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the content */
+.banner h1 {
+  font-family: Verdana, sans-serif; /* Use Verdana for the text */
+  font-size: 20px; /* Larger font size for banner */
+  font-weight: normal;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+  0 0 20px rgba(255, 255, 255, 0.6),
+  0 0 30px rgba(255, 255, 255, 0.4); /* Glowing effect */
+  margin: 0; /* Remove default margin */
 }
 
-h1, h2 {
-  color: #333;
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+h2 {
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-top: 40px;  /* Margin added at the top of h2 */
+  margin-bottom: 15px; /* Bottom margin to separate from following content */
 }
 
 h3 {
-  color: #555;
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-top: 30px;  /* Margin added at the top of h3 */
+  margin-bottom: 10px; /* Bottom margin to separate from following content */
 }
 
 p {
   line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-ul {
-  margin: 20px 0;
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #f1d600; /* Use the yellow accent color */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-  margin-top: 30px;
+  margin-bottom: 20px; /* Increased bottom margin */
+  margin-left: 20px; /* Add space from the left edge */
+  margin-right: 20px; /* Add space from the right edge */
+  background-color: #f9f9f9; /* Slightly shaded background */
+  padding: 15px;
   border-radius: 8px;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-button {
-  background-color: #f1d600;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-
-button:hover {
-  background-color: #d4b400;
-}
-
-header {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px 8px 0 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-header nav {
-  margin-top: 15px;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin-top: 40px;
-}
-
-/* For smaller screens (responsive design) */
-@media (max-width: 768px) {
-  .container {
-    width: 95%;
-  }
-
-  header h1 {
-    font-size: 22px;
-  }
-
-  header nav a {
-    font-size: 16px;
-  }
-
-  footer {
-    font-size: 14px;
-  }
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
 }
