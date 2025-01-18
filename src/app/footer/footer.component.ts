@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import {NgClass} from "@angular/common";
+import {NgcCookieConsentService} from "ngx-cookieconsent";
 
 
 @Component({
@@ -13,8 +14,10 @@ import {NgClass} from "@angular/common";
 })
 export class FooterComponent {
   isModalVisible = false;
+  cookieConsentService = inject(NgcCookieConsentService);
 
   toggleModal(): void {
-    this.isModalVisible = !this.isModalVisible;
+    this.cookieConsentService.open();
   }
+
 }
